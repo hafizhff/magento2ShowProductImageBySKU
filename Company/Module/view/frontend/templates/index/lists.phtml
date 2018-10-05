@@ -1,0 +1,21 @@
+<?php $resultData = $this->getRegisterData() ?>
+<?php $count = sizeof($resultData) ?>
+
+<table>
+    <tr>
+        <th><?php echo __('SKU') ?></th>
+        <th><?php echo __('Product Name') ?></th>
+        <th><?php echo __('Image') ?></th>
+    </tr>
+    <tbody>
+        <?php for($i=0;$i<$count;$i++) : ?>
+            <tr>
+                <td><?php echo $resultData[$i]['sku'] ?></td>
+                <td><?php echo $resultData[$i]['product_name'] ?></td>
+                <td><img src="<?php echo $resultData[$i]['path_image'] ?>" style="with:130px;height:130px"/></td>
+            </tr>
+        <?php endfor; ?>
+    </tbody>
+</table>
+
+
